@@ -6,6 +6,8 @@ import {
   Patch,
   Param,
   Delete,
+  HttpException,
+  HttpStatus,
 } from '@nestjs/common';
 
 import { ProductService } from './product.service';
@@ -18,18 +20,48 @@ export class ProductController {
 
   @Post()
   async create(@Body() createProductDto: CreateProductDto) {
-    await this.productService.create(createProductDto);
-    return 'Product created!';
+    try {
+      await this.productService.create(createProductDto);
+      return 'Product created!';
+    } catch (error) {
+      throw new HttpException(
+        {
+          status: HttpStatus.INTERNAL_SERVER_ERROR,
+          error: 'Internal server error',
+        },
+        HttpStatus.INTERNAL_SERVER_ERROR,
+      );
+    }
   }
 
   @Get()
   async findAll() {
-    return await this.productService.findAll();
+    try {
+      return await this.productService.findAll();
+    } catch (error) {
+      throw new HttpException(
+        {
+          status: HttpStatus.INTERNAL_SERVER_ERROR,
+          error: 'Internal server error',
+        },
+        HttpStatus.INTERNAL_SERVER_ERROR,
+      );
+    }
   }
 
   @Get(':id')
   async findOne(@Param('id') id: number) {
-    return await this.productService.findOne(Number(id));
+    try {
+      return await this.productService.findOne(Number(id));
+    } catch (error) {
+      throw new HttpException(
+        {
+          status: HttpStatus.INTERNAL_SERVER_ERROR,
+          error: 'Internal server error',
+        },
+        HttpStatus.INTERNAL_SERVER_ERROR,
+      );
+    }
   }
 
   @Patch(':id')
@@ -37,13 +69,32 @@ export class ProductController {
     @Param('id') id: number,
     @Body() updateProductDto: UpdateProductDto,
   ) {
-    return await this.productService.update(Number(id), updateProductDto);
+    try {
+      return await this.productService.update(Number(id), updateProductDto);
+    } catch (error) {
+      throw new HttpException(
+        {
+          status: HttpStatus.INTERNAL_SERVER_ERROR,
+          error: 'Internal server error',
+        },
+        HttpStatus.INTERNAL_SERVER_ERROR,
+      );
+    }
   }
 
   @Delete(':id')
   async remove(@Param('id') id: number) {
-    await this.productService.remove(Number(id));
-
-    return `Product removed successfully, id ${id}.`;
+    try {
+      await this.productService.remove(Number(id));
+      return `Product removed successfully, id ${id}.`;
+    } catch (error) {
+      throw new HttpException(
+        {
+          status: HttpStatus.INTERNAL_SERVER_ERROR,
+          error: 'Internal server error',
+        },
+        HttpStatus.INTERNAL_SERVER_ERROR,
+      );
+    }
   }
 }
