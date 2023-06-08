@@ -17,4 +17,12 @@ export class ProductRepository extends PrismaClient {
   async getAll(): Promise<Product[]> {
     return await this.productModel.findMany();
   }
+
+  async getById(id: number): Promise<Product> {
+    return await this.productModel.findUnique({
+      where: {
+        id: id,
+      },
+    });
+  }
 }
