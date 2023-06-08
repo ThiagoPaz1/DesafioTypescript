@@ -32,7 +32,7 @@ export class ProductService {
     return await this.productRepository.update(id, updateProductDto);
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} product`;
+  async remove(id: number): Promise<void> {
+    return this.productRepository.delete(id);
   }
 }

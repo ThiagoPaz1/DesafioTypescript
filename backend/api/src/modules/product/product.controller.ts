@@ -33,12 +33,17 @@ export class ProductController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: number, @Body() updateProductDto: UpdateProductDto) {
-    return this.productService.update(Number(id), updateProductDto);
+  async update(
+    @Param('id') id: number,
+    @Body() updateProductDto: UpdateProductDto,
+  ) {
+    return await this.productService.update(Number(id), updateProductDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.productService.remove(+id);
+  async remove(@Param('id') id: number) {
+    await this.productService.remove(Number(id));
+
+    return `Product removed successfully, id ${id}`;
   }
 }

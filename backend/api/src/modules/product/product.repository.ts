@@ -38,4 +38,12 @@ export class ProductRepository extends PrismaClient {
       data: updateProductDto,
     });
   }
+
+  async delete(id: number): Promise<void> {
+    await this.productModel.delete({
+      where: {
+        id: id,
+      },
+    });
+  }
 }
