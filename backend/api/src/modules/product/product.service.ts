@@ -33,6 +33,6 @@ export class ProductService {
   }
 
   async remove(id: number): Promise<void> {
-    return this.productRepository.delete(id);
+    return await this.productRepository.delete(id);
   }
 }
