@@ -27,8 +27,11 @@ export class ProductRepository extends PrismaClient {
     });
   }
 
-  async update(id: number, updateProductDto: UpdateProductDto) {
-    this.productModel.update({
+  async update(
+    id: number,
+    updateProductDto: UpdateProductDto,
+  ): Promise<Product> {
+    return await this.productModel.update({
       where: {
         id: id,
       },

@@ -25,8 +25,11 @@ export class ProductService {
     return await this.productRepository.getById(id);
   }
 
-  update(id: number, updateProductDto: UpdateProductDto) {
-    return `This action updates a #${id} product`;
+  async update(
+    id: number,
+    updateProductDto: UpdateProductDto,
+  ): Promise<Product> {
+    return await this.productRepository.update(id, updateProductDto);
   }
 
   remove(id: number) {
