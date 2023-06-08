@@ -27,9 +27,9 @@ export class ProductController {
     return await this.productService.findAll();
   }
 
-  @Get(':productId')
-  findOne(@Param('id') id: string) {
-    return this.productService.findOne(+id);
+  @Get(':id')
+  async findOne(@Param('id') id: number) {
+    return await this.productService.findOne(Number(id));
   }
 
   @Patch(':id')
