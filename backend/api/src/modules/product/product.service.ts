@@ -13,8 +13,12 @@ export class ProductService {
     await this.productRepository.create(createProductDto);
   }
 
-  async findAll(): Promise<Product[]> {
-    return await this.productRepository.getAll();
+  async findAll(): Promise<{ totalProducts: number; data: Product[] }> {
+    const data = await this.productRepository.getAll();
+    return {
+      totalProducts: data.length,
+      data,
+    };
   }
 
   findOne(id: number) {
