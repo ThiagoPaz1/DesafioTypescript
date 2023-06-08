@@ -23,8 +23,8 @@ export class ProductController {
   }
 
   @Get()
-  findAll() {
-    return this.productService.findAll();
+  async findAll() {
+    return await this.productService.findAll();
   }
 
   @Get(':id')

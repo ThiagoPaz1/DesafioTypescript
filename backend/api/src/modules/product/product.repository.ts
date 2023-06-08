@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { PrismaClient } from '@prisma/client';
 
 import { CreateProductDto } from './dto/create-product.dto';
+import { Product } from './types';
 
 @Injectable()
 export class ProductRepository extends PrismaClient {
@@ -11,5 +12,9 @@ export class ProductRepository extends PrismaClient {
     await this.productModel.create({
       data: createProductDto,
     });
+  }
+
+  async getAll(): Promise<Product[]> {
+    return await this.productModel.findMany();
   }
 }

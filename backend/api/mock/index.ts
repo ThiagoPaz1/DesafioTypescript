@@ -1,11 +1,11 @@
-type Product = {
+type ProductMock = {
   name: string;
   brand: string;
   price: number;
   image: string;
 };
 
-const products: Product[] = [
+const products: ProductMock[] = [
   {
     name: 'Xbox Series S',
     brand: 'Microsoft',
@@ -38,8 +38,8 @@ const products: Product[] = [
   },
 ];
 
-export function productMock(): Product[] {
-  const mock: Product[] = [];
+export function productMock(): ProductMock[] {
+  const mock: ProductMock[] = [];
 
   for (let i = 1; i <= 4; i++) {
     mock.push(...products);
