@@ -1,13 +1,9 @@
 import { Inter } from 'next/font/google'
 
 // Styles and images
-'./styles/global.css'
+import './global.css'
 
 const inter = Inter({ subsets: ['latin'] })
-
-export const metadata = {
-  title: 'Products list'
-}
 
 export default function RootLayout({
   children,
