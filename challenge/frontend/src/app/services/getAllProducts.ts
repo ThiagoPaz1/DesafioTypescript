@@ -1,12 +1,12 @@
 // Services
-import { instanceApi } from './instanceApi'
+import { baseURL } from './baseURL'
 
 // Types
 import { Product } from '../@types'
 
 export async function getAllProducts(): Promise<Product[]> {
-  const response = await instanceApi.get('/products')
-  const data = await response.data
+  const response = await fetch(`${baseURL}/products`)
+  const data = await response.json()
 
   return data
 }
