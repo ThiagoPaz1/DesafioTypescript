@@ -1,5 +1,12 @@
+// Services
 import { instanceApi } from './instanceApi'
 
-export function getAllProducts() {
-  
+// Types
+import { Product } from '../@types'
+
+export async function getAllProducts(): Promise<Product[]> {
+  const response = await instanceApi.get('/products')
+  const data = await response.data
+
+  return data
 }
