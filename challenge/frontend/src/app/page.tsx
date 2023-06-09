@@ -6,7 +6,7 @@ import { Products } from './components/Products'
 // Services
 import { getAllProducts } from './services/getAllProducts'
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Products'
 }
 
@@ -17,11 +17,11 @@ async function getData() {
 }
 
 export default async function ProductsPage() {
-  const products = await getData()
-  console.log(products)
+  const productsData = await getData()  
+
   return (
     <main>
-      <Products />
-    </main>
+      <Products productsData={productsData} />
+    </main> 
   )
 }

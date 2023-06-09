@@ -2,11 +2,14 @@
 import { Header } from './Header'
 import { ProductList } from './ProductList'  
 
-export function Products() {
+// Types
+import { ProductsProps } from './types'
+
+export function Products({ productsData }: ProductsProps) {
   return (
     <div>
       <Header />
-      <ProductList />
+      <ProductList productListData={productsData} />
     </div>
   )
 }
