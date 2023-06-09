@@ -1,5 +1,8 @@
+// Components
+import { Header } from './Header'
+
 export function Products() {
   return (
-    <h1>Produtos</h1>
+    <Header />
   )
 }

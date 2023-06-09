@@ -1,9 +1,12 @@
+// Styles and images
+import { HeaderContainer } from './styles/header'
+
 export function Header() {
   return (
-    <header>
+    <HeaderContainer>
       <h1>
         Products
       </h1>
-    </header>
+    </HeaderContainer>
   )
 }
