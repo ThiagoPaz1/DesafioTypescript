@@ -1,5 +1,3 @@
-'use client'
-
 // Styles and images
 import { HeaderContainer } from './styles/header'
 

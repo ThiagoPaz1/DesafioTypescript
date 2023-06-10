@@ -1,12 +1,13 @@
+import React from 'react'
 import { Metadata } from 'next'
 
 // Components
-import { Products } from './components/Products'
+import { Products } from '@/components/Products'
 
 // Services
-import { getAllProducts } from './services/getAllProducts'
+import { getAllProducts } from '@/services/getAllProducts'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Products'
 }
 
@@ -17,7 +18,7 @@ async function getData() {
 }
 
 export default async function ProductsPage() {
-  const productsData = await getData()  
+  const productsData = await getData()
 
   return (
     <main>
