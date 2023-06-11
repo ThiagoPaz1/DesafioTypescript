@@ -4,9 +4,12 @@ import { Product } from './Product'
 // Types
 import { ProductListProps } from '../types'
 
+// Styles and images
+import { ProductListContainer } from '../styles/productList'
+
 export async function ProductList({ productListData }: ProductListProps) {
   return (
-    <ul>
+    <ProductListContainer>
       {
         productListData.map(i =>
           <Product
@@ -18,6 +21,6 @@ export async function ProductList({ productListData }: ProductListProps) {
           />
         )
       }
-    </ul>
+    </ProductListContainer>
   )
 }
