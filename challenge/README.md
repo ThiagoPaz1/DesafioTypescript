@@ -8,7 +8,7 @@
 ### 3 - Ainda na pasta /api, digite o comando yarn docker:up para subir o container responsável pelo banco de dados.
 ### 4 - Ainda na pasta /api, digite o comando yarn migrations:run para criar as tabelas do banco de dados.
 ### 5 - Ainda na pasta /api, digite o comando yarn seeders:run, para popular o banco de dados.
-### 3 - Último passo, digite o comando yarn start:dev, para iniciar a api.
+### 6 - Último passo, digite o comando yarn start:dev, para iniciar a api.
 
 ## Frontend:
 ### 1 - Verifique se seu node está na versão de no mínimo v16.16.0 ou maior.
@@ -25,6 +25,7 @@
     <li>Docker</li>
     <li>PostgreSQL</li>
     <li>Typescript</li>
+    <li>Prisma</li>
     <li>Node</li>
 </ol>
 
