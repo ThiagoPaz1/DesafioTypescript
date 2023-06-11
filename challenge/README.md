@@ -3,7 +3,7 @@
 # Instruções para instalação do projeto:
 
 ## Backend:
-### 1 - No seu terminal, entre na pasta /challenge/backend/api, e digite o comando killall node, para garantir que não existe nenhum processo que esta utilizando a porta do servidor.
+### 1 - No seu terminal, após clonar o repositório entre na pasta /challenge/backend/api, e digite o comando killall node, para garantir que não existe nenhum processo que esta utilizando a porta do servidor.
 ### 2 - Ainda na pasta /api, digite o comando yarn, para instalar as dependências do projeto.
 ### 3 - Ainda na pasta /api, digite o comando yarn docker:up para subir o container responsável pelo banco de dados.
 ### 4 - Ainda na pasta /api, digite o comando yarn migrations:run para criar as tabelas do banco de dados.
