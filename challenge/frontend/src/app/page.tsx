@@ -11,18 +11,20 @@ export const metadata: Metadata = {
   title: 'Products'
 }
 
-async function getData() {
+async function getProductsData() {
+  await new Promise((resolve) => setTimeout(resolve, 5000))
+
   const data = await getAllProducts()
 
   return data
 }
 
 export default async function ProductsPage() {
-  const productsData = await getData()
+  const productsData = await getProductsData()
 
   return (
     <main>
       <Products productsData={productsData} />
-    </main> 
+    </main>
   )
 }

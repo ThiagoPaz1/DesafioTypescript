@@ -7,6 +7,7 @@ export const ProductListContainer = styled.ul`
   column-gap: 40px;
   row-gap: 60px;
   margin-top: 85px;
+  margin-bottom: 3rem;
 
   @media (min-width: 1729px) {
     grid-template-columns: 241.47px 241.47px 241.47px 241.47px 241.47px;
