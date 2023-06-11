@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 }
 
 async function getProductsData() {
-  await new Promise((resolve) => setTimeout(resolve, 5000))
+  await new Promise((resolve) => setTimeout(resolve, 1500))
 
   const data = await getAllProducts()
 
