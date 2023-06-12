@@ -10,7 +10,7 @@
 ### 5 - Ainda na pasta /api, digite o comando yarn seeders:run, para popular o banco de dados.
 ### 6 - Último passo, digite o comando yarn start:dev, para iniciar a api.
 
-### Você pode acessar a documentação dos endpoints através desse link http://localhost:3003/api-doc#/products
+### 7 - Com a api já iniciada você pode acessar a documentação dos endpoints através desse link http://localhost:3003/api-doc#/products
 
 ## Frontend:
 ### 1 - Verifique se seu node está na versão de no mínimo v16.16.0 ou maior.
