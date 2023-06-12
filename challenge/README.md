@@ -10,6 +10,8 @@
 ### 5 - Ainda na pasta /api, digite o comando yarn seeders:run, para popular o banco de dados.
 ### 6 - Último passo, digite o comando yarn start:dev, para iniciar a api.
 
+### Você pode acessar a documentação dos endpoints através desse link http://localhost:3003/api-doc#/products
+
 ## Frontend:
 ### 1 - Verifique se seu node está na versão de no mínimo v16.16.0 ou maior.
 ### 2 - No seu terminal, entre na pasta /challenge/frontend, e digite o comando npm install, para instalar as dependências do projeto.
